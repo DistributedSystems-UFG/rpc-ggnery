@@ -3,10 +3,13 @@
 
 This example illustrates RPC in Python using the RPyC library (https://rpyc.readthedocs.io/).
 
-It consists of a server that exposes two remotely accessible procedures used to manipulate a list:
+It consists of a server that exposes remotely accessible procedures to manipulate a list:
 
-- value(): returns the current value of the list (its elements)
-- append(): adds a new element to the end of the list
+**Procedimentos disponíveis:**
+- value(), append(data), length(), clear()
+- search(data), contains(data), count(data), get(index)
+- remove(data), remove_at(index), insert(index, data)
+- sort(reverse=False), reverse()
 
 ### Before running the example, you need to install the RPyC library:
 
@@ -29,6 +32,6 @@ Also make sure it is using one of the ports left open for incoming TCP connectio
 
     python3 client.py
 
-### Now add other remote procedures to the server and change the client to test them
+### Funcionalidades Implementadas
 
-You may add the same remote procedures that you added in the sockets activity.
+O cliente testa as principais operações: append, insert, search, contains, sort, reverse, remove e length.
